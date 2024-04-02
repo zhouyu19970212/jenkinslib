@@ -33,6 +33,7 @@ pipeline {
                             url: 'https://github.com/zhouyu19970212/xxx.git', // 你的GitHub仓库URL  
                             credentialsId: 'zhouyu19970212' // Jenkins中配置的GitHub凭据ID  
                         }
+                        tools.PrintMes("获取成功!",'red')
                     }
                 }
             }
