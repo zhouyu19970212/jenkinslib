@@ -27,6 +27,12 @@ pipeline {
                 timeout(time: 5, unit: "MINUTES") { //步骤超时时间
                     script {
                         tools.PrintMes("获取代码!",'red')
+                        steps {  
+                            // 从GitHub拉取代码  
+                            git branch: 'main', // 分支名  
+                            url: 'https://github.com/zhouyu19970212/xxx.git', // 你的GitHub仓库URL  
+                            credentialsId: 'zhouyu19970212' // Jenkins中配置的GitHub凭据ID  
+                        }
                     }
                 }
             }
