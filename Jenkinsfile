@@ -5,6 +5,7 @@
 def tools = new org.devops.tools()
 
 String workspace = "/opt/jenkins/workspace"
+String branchName = "master"
 
 //Pipeline
 pipeline {
@@ -32,6 +33,14 @@ pipeline {
                             branch: 'main', // 要拉取的分支名  
                             credentialsId: 'zhouyu19970212' // Jenkins中配置的GitHub凭据ID
                         )
+                        println("${branchName}")
+                
+                        tools.PrintMes("获取代码","green")
+                        checkout([$class: 'GitSCM', branches: [[name: "${branchName}"]], 
+                                      doGenerateSubmoduleConfigurations: false, 
+                                      extensions: [], 
+                                      submoduleCfg: [], 
+                                      userRemoteConfigs: [[credentialsId: 'zhouyu19970212', url: "https://github.com/zhouyu19970212/jenkinslib.git"]]])
                         tools.PrintMes("获取成功!",'red')
                     }
                 }
