@@ -40,7 +40,7 @@ pipeline {
                                       doGenerateSubmoduleConfigurations: false, 
                                       extensions: [], 
                                       submoduleCfg: [], 
-                                      userRemoteConfigs: [[credentialsId: 'zhouyu19970212', url: "https://github.com/zhouyu19970212/jenkinslib.git"]]])
+                                      userRemoteConfigs: [[credentialsId: '34f6e439-77bb-409f-9739-b87ee292e33a', url: "https://github.com/zhouyu19970212/jenkinslib.git"]]])
                         tools.PrintMes("获取成功!",'red')
                     }
                 }
