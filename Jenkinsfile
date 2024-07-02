@@ -31,7 +31,7 @@ pipeline {
                         git(  
                             url: 'https://github.com/zhouyu19970212/jenkinslib.git', // 另一个仓库的 URL  
                             branch: 'main', // 要拉取的分支名  
-                            credentialsId: 'zhouyu19970212' // Jenkins中配置的GitHub凭据ID
+                            credentialsId: '34f6e439-77bb-409f-9739-b87ee292e33a' // Jenkins中配置的GitHub凭据ID
                         )
                         println("${branchName}")
                 
