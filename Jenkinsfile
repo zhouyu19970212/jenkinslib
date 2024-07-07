@@ -34,13 +34,6 @@ pipeline {
                             credentialsId: '34f6e439-77bb-409f-9739-b87ee292e33a' // Jenkins中配置的GitHub凭据ID
                         )
                         println("${branchName}")
-                
-                        tools.PrintMes("获取代码","green")
-                        checkout([$class: 'GitSCM', branches: [[name: "${branchName}"]], 
-                                      doGenerateSubmoduleConfigurations: false, 
-                                      extensions: [], 
-                                      submoduleCfg: [], 
-                                      userRemoteConfigs: [[credentialsId: '34f6e439-77bb-409f-9739-b87ee292e33a', url: "https://github.com/zhouyu19970212/jenkinslib.git"]]])
                         tools.PrintMes("获取成功!",'red')
                     }
                 }
